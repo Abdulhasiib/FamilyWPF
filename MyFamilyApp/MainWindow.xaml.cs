@@ -27,34 +27,29 @@ namespace MyFamilyApp
         }
 
         
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            List<Member> member = new List<Member>();
 
+            member.Add(new Member() { FirstName = First_Name_TextBox.Text, LastName = Last_Name_TextBox.Text, Age = Age_TextBoc.Text, Occupation = Occupation_TextBox.Text, Relation = RelationType.Text, Gender = GenderMale.Name });
+
+            FamilyTableGrid.ItemsSource = member;
         }
 
-        private void Button_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
+       public class Member
         {
+            public string FirstName { get; set; }
 
+            public string LastName { get; set; }
+
+            public string Occupation { get; set; }
+
+            public string Age { get; set; }
+
+            public string Relation { get; set; }
+
+            public string Gender { get; set; }
         }
+        
     }
 }

@@ -8,18 +8,18 @@
         Title="My Family Application" Height="453.816" Width="548.684" Background="#FFB5ACF0" AutomationProperties.AutomationId="My Family Application" AutomationProperties.Name="My Family Application">
     <Grid Margin="10,-5,2,5">
         <Label Content="First Name:" Margin="50,50,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" AutomationProperties.AutomationId="First Name:" AutomationProperties.Name="First Name:" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="145,50,0,0" TextWrapping="Wrap" Text="Enter First Name" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="First Name Text Box" AutomationProperties.Name="First Name Text Box" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="First_Name_TextBox" HorizontalAlignment="Left" Height="23" Margin="145,50,0,0" TextWrapping="Wrap" Text="Enter First Name" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="First Name Text Box" AutomationProperties.Name="First Name Text Box"/>
         <Label Content="Last Name:" Margin="270,50,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" AutomationProperties.AutomationId="Last Name:" AutomationProperties.Name="Last Name:" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="360,50,0,0" TextWrapping="Wrap" Text="Enter Last Name" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="Last Name Text Box" AutomationProperties.Name="Last Name Text Box" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="Last_Name_TextBox" HorizontalAlignment="Left" Height="23" Margin="360,50,0,0" TextWrapping="Wrap" Text="Enter Last Name" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="Last Name Text Box" AutomationProperties.Name="Last Name Text Box"/>
         <Label Content="Gender:" Margin="50,155,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" AutomationProperties.AutomationId="Gender:" AutomationProperties.Name="Gender:" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"/>
-        <RadioButton Content="Male" HorizontalAlignment="Left" Margin="145,160,0,0" VerticalAlignment="Top" IsChecked="True" AutomationProperties.AutomationId="Male" AutomationProperties.Name="Male" FontWeight="Bold"/>
-        <RadioButton Content="Female" HorizontalAlignment="Left" Margin="205,160,0,0" VerticalAlignment="Top" AutomationProperties.AutomationId="Female" AutomationProperties.Name="Female" FontWeight="Bold"/>
+        <RadioButton x:Name="GenderMale" Content="Male" HorizontalAlignment="Left" Margin="145,160,0,0" VerticalAlignment="Top" IsChecked="True" AutomationProperties.AutomationId="Male" AutomationProperties.Name="Male" FontWeight="Bold"/>
+        <RadioButton x:Name="GenderFemale" Content="Female" HorizontalAlignment="Left" Margin="205,160,0,0" VerticalAlignment="Top" AutomationProperties.AutomationId="Female" AutomationProperties.Name="Female" FontWeight="Bold"/>
         <Label Content="Occupation:" Margin="50,85,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" AutomationProperties.AutomationId="Occupation" AutomationProperties.Name="Occupation" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="145,85,0,0" TextWrapping="Wrap" Text="Enter Occupation" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="Occupation Text Box" AutomationProperties.Name="Occupation Text Box" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="Occupation_TextBox" HorizontalAlignment="Left" Height="23" Margin="145,85,0,0" TextWrapping="Wrap" Text="Enter Occupation" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="Occupation Text Box" AutomationProperties.Name="Occupation Text Box"/>
         <Label Content="Age:" Margin="270,85,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" AutomationProperties.AutomationId="Age" AutomationProperties.Name="Age" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="360,85,0,0" TextWrapping="Wrap" Text="Enter Age" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="Age Text Box" AutomationProperties.Name="Age Text Box" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="Age_TextBoc" HorizontalAlignment="Left" Height="23" Margin="360,85,0,0" TextWrapping="Wrap" Text="Enter Age" Width="100" Opacity="0.5" VerticalAlignment="Top" BorderBrush="#FF010308" SpellCheck.IsEnabled="True" AutomationProperties.AutomationId="Age Text Box" AutomationProperties.Name="Age Text Box"/>
         <Label Content="Relation:" Margin="50,120,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" AutomationProperties.AutomationId="Relation" AutomationProperties.Name="Relation" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"/>
-        <ComboBox HorizontalAlignment="Left" Margin="145,120,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="#FF020204" BorderThickness="2" IsHitTestVisible="True">
+        <ComboBox x:Name="RelationType" HorizontalAlignment="Left" Margin="145,120,0,0" VerticalAlignment="Top" Width="120" BorderBrush="#FF020204" BorderThickness="2" IsHitTestVisible="True">
             <ComboBoxItem Content="Father" AutomationProperties.AutomationId="Father" AutomationProperties.Name="Father"/>
             <ComboBoxItem Content="Mother" AutomationProperties.AutomationId="Mother" AutomationProperties.Name="Mother"/>
             <ComboBoxItem Content="Husband" AutomationProperties.AutomationId="Husband" AutomationProperties.Name="Husband"/>
@@ -30,20 +30,10 @@
             <ComboBoxItem Content="Daughter" AutomationProperties.AutomationId="Daughter" AutomationProperties.Name="Daughter"/>
             <ComboBoxItem Content="Self"/>
         </ComboBox>
-        <Button Content="Add" Margin="385,388,69,0" VerticalAlignment="Top" Width="75" Click="Button_Click" IsEnabledChanged="Button_IsEnabledChanged"/>
-        <Button Content="Delete" Margin="292,388,150,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Edit" Margin="209,388,245,0" VerticalAlignment="Top" Width="75"/>
-        <DataGrid HorizontalAlignment="Left" Height="150" Margin="50,210,0,0" VerticalAlignment="Top" Width="410" SelectionChanged="DataGrid_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="First Name"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Last Name"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Occupation"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Age"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Gender"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Relation"/>
-            </DataGrid.Columns>
-
-        </DataGrid>
+        <Button x:Name="AddButton" Content="Add" Margin="385,388,69,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="DeleteButton" Content="Delete" Margin="292,388,150,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="EditButton" Content="Edit" Margin="209,388,245,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="FamilyTableGrid" HorizontalAlignment="Left" Height="150" Margin="50,206,0,0" VerticalAlignment="Top" Width="410" BorderThickness="2" AutomationProperties.AutomationId="FamilyTable" AutomationProperties.Name="FamilyTable"/>
 
     </Grid>
 </Window>
